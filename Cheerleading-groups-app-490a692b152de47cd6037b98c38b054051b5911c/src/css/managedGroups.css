@@ -1,0 +1,323 @@
+section {
+  background-color: #ed6847;
+}
+.members-label {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+.members-requests-section {
+  display: flex;
+
+  margin-left: 360px;
+}
+.group-members-title {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: white; /* Set text color to white */
+  font-weight: bold; /* Optional: make the text bold */
+}
+.requests-label {
+  margin-left: 680px;
+}
+.owned-groups-background {
+  background-color: #ed6847; /* Orange background */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  padding: 50px 0; /* Adjust padding to add space around the content */
+}
+.group-div2 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1500px; /* Fixed width for desktops */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+/* Tablet Adjustments */
+@media screen and (max-width: 1024px) {
+  .group-div2 {
+    width: 90%; /* Adjust for tablets while keeping a similar layout */
+  }
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+  .group-div2 {
+    width: 95%; /* Slightly smaller width for smaller screens */
+  }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+  .group-div2 {
+    width: 100%; /* Full width for very small screens */
+  }
+}
+.group-item {
+  height: 480px;
+  margin-bottom: 20px;
+  background-color: #ebd8d0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  margin-top: auto; /* Push the container to the bottom */
+}
+
+
+@media (max-width: 800px) {
+  .button-container {
+    display: inline-block;
+  }
+
+}
+.request-join-button {
+  background-color: #ed6847;
+  color: white;
+  
+}
+
+.leave-group-button {
+  background-color: red;
+  color: white;
+}
+
+.request-join-button,
+.leave-group-button {
+  margin-top: auto; /* Pushes buttons to the bottom */
+  width: 400px; /* Optional: make buttons full-width */
+  padding: 10px 50px;
+  border-radius: 5px;
+  text-align: center;
+  margin:auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .request-join-button,
+  .leave-group-button {
+    width: 250px; /* Adjust width for tablets */
+    padding: 8px 16px; /* Smaller padding */
+margin-top: 20px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .request-join-button {
+    width: 200px; /* Narrower buttons for smaller screens */
+    padding: 6px 12px; /* Further reduce padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .request-join-button {
+    width: 250px; /* Full width on very small screens */
+    padding: 6px 8px; /* Compact padding */
+  }
+
+}
+.request-join-button {
+  background-color: #ed6847;
+  color: white;
+}
+
+.leave-group-button {
+  background-color: red;
+  color: white;
+ 
+}
+
+.Group-details {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center align items */
+  background-color: #ed6847;
+  padding: 20px;
+}
+.Group-info2 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 auto; /* Allow flexible growth */
+}
+
+.products-div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 auto; /* Allow flexible growth */
+}
+.location-text {
+  font-size: 1.9rem; /* Equivalent to 32px */
+
+}
+.description-text  {
+  font-size: 1.9rem; /* Equivalent to 32px */
+}
+ @media screen and (max-width: 768px) {
+  .Group-details {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align stacked items */
+  }
+
+  .Group-info2 {
+    max-width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Add space between stacked elements */
+  }
+
+  .products-div {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+.product-list {
+  flex: 1; /* This allows the product items to take up available space */
+}
+.header {
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+.create-product {
+  margin-top: 20px; /* Pushes the button to the bottom of the container */
+  width: 80%;
+  margin-left: 40px;
+  min-height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .create-product {
+    margin: 20px auto; /* Center the button horizontally */
+    display: block; /* Ensure it's treated as a block-level element */
+    width: 60%; /* Adjust width for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .create-product {
+    margin: 20px auto; /* Center the button horizontally */
+    width: 80%; /* Adjust width for smaller screens */
+  }
+}
+.product-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px; /* Adjusts space between elements */
+  margin-top: 10px;
+}
+
+.product-name {
+  flex-basis: 25%;
+  margin-left: 10px;
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds "..." to indicate overflow */
+  max-width: 150px; /* Limit the width of the product name */
+  display: inline-block; /* Ensures text-overflow works */
+}
+
+.product-price {
+  flex-basis: 15%;
+  text-align: center;
+}
+
+.product-description {
+  flex-basis: 20%;
+}
+
+.buy-button {
+  flex-basis: 20%;
+  text-align: right;
+  margin-left: 10px; /* Optional: Adjust button positioning */
+}
+
+.owner {
+  margin-top: 5px;
+  text-align: center;
+font-size: 20px;
+}
+
+.number {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.message-container {
+  position: relative;
+  max-width: 1600px; /* Make container responsive */
+  margin: 20px auto; /* Center the container */
+}
+
+.add-message-button {
+  display: block;
+  margin: 0 auto 20px auto; /* Center the button and add spacing below */
+}
+
+.message-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow-y: auto; /* Add scrolling for overflow content */
+}
+
+.message-item {
+  width: 100%; /* Grid controls width */
+  height: 300px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  padding: 16px; /* Add padding for better spacing */
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Push content to top and bottom */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .message-board {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .message-board {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .message-board {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+
+  .message-item {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 12px; /* Reduce padding for small screens */
+    margin-top: 20px;
+  }
+}

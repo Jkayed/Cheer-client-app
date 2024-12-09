@@ -1,0 +1,150 @@
+/* General container styles */
+.group-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Individual group item styles */
+.group-item {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+/* Text styling */
+.group-name {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: clip; /* No ellipsis */
+  white-space: normal; /* Allows multi-line text */
+}
+.location {
+  font-size: 20px;
+}
+.number {
+  font-size: 20px;
+}
+.group-location,
+.group-owner,
+.group-phone,
+.group-description {
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: center;
+}
+.Group-info{
+  font-size: 20px;
+}
+.no-groups-message {
+  font-size: 20px;
+  color: #555;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Button styling */
+.request-button {
+  background-color: #ed6847;
+  color: white;
+  width: 280px;
+  height: 45px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 180px;
+  transition: background-color 0.3s ease;
+  margin:auto;
+}
+
+.request-button:hover {
+  background-color: #d65a3d;
+}
+
+/* Modal buttons */
+.modal-footer .button {
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+
+/* Tablet (Medium screens) */
+@media (max-width: 768px) {
+  .group-container {
+    width: 95%;
+    padding-top: 15px;
+  }
+
+  .group-item {
+    padding: 15px;
+  }
+
+  .group-name {
+    font-size: 30px;
+  }
+
+  .group-location,
+  .group-owner,
+  .group-phone,
+  .group-description {
+    font-size: 14px;
+  }
+
+  .request-button {
+    width: 150px;
+    height: 40px;
+  }
+}
+
+/* Mobile (Small screens) */
+@media (max-width: 480px) {
+  .group-container {
+    padding-top: 10px;
+  }
+
+  .group-item {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .group-name {
+    font-size: 40px;
+  }
+
+  .group-location,
+  .group-owner,
+  .group-phone,
+  .group-description {
+    font-size: 12px;
+    margin: 3px 0;
+  }
+
+  .request-button {
+    width: 190px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .no-groups-message {
+    font-size: 18px;
+  }
+}

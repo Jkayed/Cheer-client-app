@@ -1,0 +1,139 @@
+.find-meetup-background {
+  background: 
+    linear-gradient(rgba(237, 104, 71, 0.7), rgba(237, 104, 71, 0.7)), /* Color overlay with transparency */
+    url('../assets/lesli-whitecotton-r6vzsvAMr30-unsplash.jpg'); /* Background image */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 50px;
+}
+
+.find-meetup-div {
+  border-radius: 30px;
+  background-color: white;
+  width: 90%; /* More fluid width */
+  max-width: 1500px;
+  min-height: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.find-group-header {
+  font-size: 2rem; /* Scalable font size */
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.find-group-today {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.location-input {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-button {
+  background-color: #ed6847;
+  width: 90%;
+  max-width: 500px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 20px auto 0;
+  display: block;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.create-meetup-container {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  min-height: 20vh; /* Ensure full height for vertical centering */
+  text-align: center; /* Center text inside the container */
+}
+
+.create-meetup-label {
+  font-size: 18px;
+  margin-bottom: 20px; /* Add spacing between the label and the button */
+}
+
+.create-meetup-button {
+  background-color: #ed6847;
+  width: 200px; /* Base width */
+  max-width: 300px; /* Maximum width limit */
+  height: 45px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 20px !important;
+  margin: 0 auto; /* Ensure it's centered horizontally */
+  display: block; /* Block-level element */
+padding: 10px;
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+@media screen and (max-width: 768px) {
+  .create-meetup-button {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 250px; /* Limit width for better readability */
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .create-meetup-button {
+    max-width: 200px; /* Further restrict width for very small screens */
+    font-size: 12px; /* Smaller font size */
+  }
+}
+@media (max-width: 768px) {
+  /* For tablets and smaller */
+  .create-meetup-button-container {
+    margin-top: 10px;
+  }
+
+  .location-input {
+    width: 140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .find-meetup-div {
+    padding: 40px;
+  }
+
+  .find-group-header {
+    font-size: 3rem;
+  }
+
+  .find-group-today {
+    font-size: 1.2rem;
+  }
+
+  .search-button,
+  .create-meetup-button {
+    font-size: 1.2rem;
+  }
+  .location-input {
+    width: 140px;
+  }
+}

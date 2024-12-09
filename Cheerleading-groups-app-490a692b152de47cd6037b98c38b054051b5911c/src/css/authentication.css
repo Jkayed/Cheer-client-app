@@ -1,0 +1,153 @@
+.authentication-background {
+background-color: #ed6847;
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 50px;
+}
+.logIn-header {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 20px;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+.logIn-label {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #1e1e1e;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.email-input-label,
+.password-input-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #1e1e1e;
+  margin-top: 20px;
+  margin-left: 9%;
+}
+
+.email-input,
+.password-input {
+  width: 90%;
+  max-width: 400px;
+  height: 40px;
+  border: 1px solid #c3c3c3;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 10px auto 0;
+  display: block;
+}
+
+.forgot-password-label {
+  font-size: 0.9rem;
+  color: #828282;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logIn-button {
+  width: 90%;
+  max-width: 400px;
+  height: 43px;
+  border-radius: 8px;
+  background-color: #ed6847;
+  color: white;
+  margin: 30px auto 0;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.signUp-label {
+  font-size: 0.9rem;
+  color: #828282;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signUp-label span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-container {
+  height: 700px;
+  display: flex;
+  flex-direction: column-reverse; /* Stack items for smaller screens */
+  width: 100%;
+  max-width: 1200px;
+  margin: 5% auto;
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures background doesn't overflow */
+}
+
+.form-half {
+  flex: 1;
+  padding: 20px;
+}
+
+.background-half {
+  background-image: url("../assets/lesli-whitecotton-r6vzsvAMr30-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+ margin-top: 0px;
+    
+  }
+}
+@media (min-width: 768px) {
+  .auth-container {
+    flex-direction: row; /* Side-by-side on medium+ screens */
+    height: 700px;
+    
+  }
+
+  .background-half {
+    height: auto;
+    width: 50%;
+  }
+
+  .form-half {
+    padding: 40px;
+  }
+
+  .logIn-header {
+    font-size: 3rem;
+  }
+
+  .logIn-label {
+    font-size: 1.2rem;
+  }
+
+  .email-input,
+  .password-input {
+    max-width: 500px;
+  }
+
+  .logIn-button {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .auth-container {
+    max-width: 1250px;
+  }
+
+  .background-half {
+    width: 50%;
+  }
+}

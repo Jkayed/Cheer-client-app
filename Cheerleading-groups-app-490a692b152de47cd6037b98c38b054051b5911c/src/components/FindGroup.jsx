@@ -12,7 +12,7 @@ function FindGroup() {
 
   // Fetch groups from the backend when the component mounts
   useEffect(() => {
-    fetch(`http://localhost:3000/groups`)
+    fetch(`https://cheer-client-app-backend.onrender.com/groups`)
       .then((response) => response.json())
       .then((data) => setGroups(data))
       .catch((err) => {

@@ -32,7 +32,7 @@ function JoinedGroups() {
   const handleLeaveGroup = () => {
     if (!groupToLeave) return;
 
-    fetch(`http://localhost:3000/groups/${groupToLeave}/leave`, {
+    fetch(`https://cheer-client-app-backend.onrender.com/groups/${groupToLeave}/leave`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +63,7 @@ function JoinedGroups() {
 
   // Fetch groups for the current user
   useEffect(() => {
-    fetch(`http://localhost:3000/groups`)
+    fetch(`https://cheer-client-app-backend.onrender.com/groups`)
       .then((response) => response.json())
       .then((data) => {
         const filteredGroups = data.filter((group) =>

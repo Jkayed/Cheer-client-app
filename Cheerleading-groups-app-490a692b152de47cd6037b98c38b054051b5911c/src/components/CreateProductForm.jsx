@@ -17,7 +17,7 @@ function CreateProductForm({ groupId }) {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/products", {
+      const response = await fetch("https://cheer-client-app-backend.onrender.com/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

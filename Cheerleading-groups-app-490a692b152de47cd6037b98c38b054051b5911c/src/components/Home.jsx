@@ -4,7 +4,7 @@ import axios from "axios";
 function Home() {
   function testDatabase() {
     axios
-      .post("http://localhost:3000/contact", {
+      .post("https://cheer-client-app-backend.onrender.com/contact", {
         firstName: "Test",
         lastName: "Test",
         email: "Test",

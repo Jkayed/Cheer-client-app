@@ -24,7 +24,7 @@ const MessageBoard = ({ groupId, ownerId }) => {
   const fetchMessages = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/groups/674023a40d464a4485cc9a45/messages`
+        `https://cheer-client-app-backend.onrender.com/groups/674023a40d464a4485cc9a45/messages`
       );
       const data = await response.json();
       setMessages(data);
@@ -40,7 +40,7 @@ const MessageBoard = ({ groupId, ownerId }) => {
     if (!newMessage.trim()) return;
     try {
       const response = await fetch(
-        `http://localhost:3000/groups/674023a40d464a4485cc9a45/messages`,
+        `https://cheer-client-app-backend.onrender.com/groups/674023a40d464a4485cc9a45/messages`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -62,7 +62,7 @@ const MessageBoard = ({ groupId, ownerId }) => {
   const handleDeleteMessage = async (messageId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/groups/${groupId}/messages/${messageId}`,
+        `https://cheer-client-app-backend.onrender.com/groups/${groupId}/messages/${messageId}`,
         {
           method: "DELETE",
         }

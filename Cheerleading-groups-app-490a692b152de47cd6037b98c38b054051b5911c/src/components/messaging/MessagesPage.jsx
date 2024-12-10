@@ -18,13 +18,13 @@ function MessagesPage() {
 
   useEffect(() => {
     if (!socketRef.current) {
-      socketRef.current = io("http://localhost:3000");
+      socketRef.current = io("https://cheer-client-app-backend.onrender.com");
     }
 
     const socket = socketRef.current;
 
     if (receiverId) {
-      fetch(`http://localhost:3000/messages/${currentUserId}/${receiverId}`)
+      fetch(`https://cheer-client-app-backend.onrender.com/messages/${currentUserId}/${receiverId}`)
         .then((response) => response.json())
         .then((data) => {
           if (Array.isArray(data)) {
@@ -56,7 +56,7 @@ function MessagesPage() {
   }, [receiverId, currentUserId]);
 
   const sendMessage = () => {
-    fetch("http://localhost:3000/messages", {
+    fetch("https://cheer-client-app-backend.onrender.com/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

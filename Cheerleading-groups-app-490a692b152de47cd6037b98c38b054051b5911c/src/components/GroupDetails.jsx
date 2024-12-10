@@ -86,7 +86,7 @@ const GroupDetails = () => {
   };
   const getGroupOwner = () => {
     setLoading(true);
-    fetch(`http://localhost:3000/groups`)
+    fetch(`https://cheer-client-app-backend.onrender.com/groups`)
       .then((response) => response.json())
       .then((data) => {
         const groupData = data.find((group) => group._id === groupId); // Find the group with the matching _id
@@ -104,7 +104,7 @@ const GroupDetails = () => {
   };
   const fetchGroupData = () => {
     setLoading(true);
-    fetch(`http://localhost:3000/groups/${groupId}/members`)
+    fetch(`https://cheer-client-app-backend.onrender.com/groups/${groupId}/members`)
       .then((response) => response.json())
       .then((data) => {
         setMembers(data);
@@ -115,7 +115,7 @@ const GroupDetails = () => {
         setLoading(false);
       });
 
-    fetch(`http://localhost:3000/groups/${groupId}/requests`)
+    fetch(`https://cheer-client-app-backend.onrender.com/groups/${groupId}/requests`)
       .then((response) => response.json())
       .then((data) => {
         setRequests(data);
@@ -125,7 +125,7 @@ const GroupDetails = () => {
       });
   };
   const fetchProducts = () => {
-    fetch(`http://localhost:3000/groups/${groupId}/products`)
+    fetch(`https://cheer-client-app-backend.onrender.com/groups/${groupId}/products`)
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
@@ -137,7 +137,7 @@ const GroupDetails = () => {
 
   const handleAcceptRequest = (memberId) => {
     fetch(
-      `http://localhost:3000/groups/${groupId}/requests/${memberId}/accept`,
+      `https://cheer-client-app-backend.onrender.com/groups/${groupId}/requests/${memberId}/accept`,
       {
         method: "POST",
       }
@@ -156,7 +156,7 @@ const GroupDetails = () => {
 
   const handleDeclineRequest = (memberId) => {
     fetch(
-      `http://localhost:3000/groups/${groupId}/requests/${memberId}/decline`,
+      `https://cheer-client-app-backend.onrender.com/groups/${groupId}/requests/${memberId}/decline`,
       {
         method: "POST",
       }
@@ -174,7 +174,7 @@ const GroupDetails = () => {
   const handlePaymentStatusUpdate = async (memberID, status) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/groups/674023a40d464a4485cc9a45/members/tjdRnfcvb9Z23cR8zJhH3x29NS32/payment-status`,
+        `https://cheer-client-app-backend.onrender.com/groups/674023a40d464a4485cc9a45/members/tjdRnfcvb9Z23cR8zJhH3x29NS32/payment-status`,
         {
           method: "PATCH",
           headers: {
@@ -372,7 +372,7 @@ const GroupDetails = () => {
   const handleDeleteProduct = async (productId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/products/${productId}`,
+        `https://cheer-client-app-backend.onrender.com/products/${productId}`,
         {
           method: "DELETE",
         }
@@ -392,7 +392,7 @@ const GroupDetails = () => {
   const handlePurchase = async (product) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/create-checkout-session`,
+        `https://cheer-client-app-backend.onrender.com/create-checkout-session`,
         {
           method: "POST",
           headers: {

@@ -6,7 +6,7 @@ const ConversationsTab = ({ currentUserId }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/recent-conversations/${currentUserId}`)
+    fetch(`https://cheer-client-app-backend.onrender.com/recent-conversations/${currentUserId}`)
       .then((response) => response.json())
       .then((data) => {
         setRecentConversations(data);

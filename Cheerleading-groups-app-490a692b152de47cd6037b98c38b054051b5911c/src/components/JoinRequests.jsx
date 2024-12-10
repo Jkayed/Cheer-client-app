@@ -12,7 +12,7 @@ function JoinRequests({ groupId }) {
     const fetchJoinRequests = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/groups/66d4d4d41737dddf7dc442e3/join-requests?ownerId=${currentUser.uid}`,
+          `https://cheer-client-app-backend.onrender.com/groups/66d4d4d41737dddf7dc442e3/join-requests?ownerId=${currentUser.uid}`,
           {
             method: "GET",
           }
@@ -34,7 +34,7 @@ function JoinRequests({ groupId }) {
   const handleApprove = async (requestId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/groups/${groupId}/join-requests/${requestId}/approve`,
+        `https://cheer-client-app-backend.onrender.com/groups/${groupId}/join-requests/${requestId}/approve`,
         {
           method: "POST",
           headers: {
@@ -61,7 +61,7 @@ function JoinRequests({ groupId }) {
   const handleReject = async (requestId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/groups/${groupId}/join-requests/${requestId}/reject`,
+        `https://cheer-client-app-backend.onrender.com/groups/${groupId}/join-requests/${requestId}/reject`,
         {
           method: "POST",
           headers: {

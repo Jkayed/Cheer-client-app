@@ -8,7 +8,7 @@ const stripe = require("stripe")(
   "sk_test_51PuIxd04SqVmxWqObj6TUfy02Py19x7wA8qN572q2fOhoW97EbowJlYRG6mMUq4ySAyw8gnurg4V8vIvtJzm8ceW00QcfZ9XuQ"
 );
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 const { ObjectId } = mongoose.Types;
 
 const storeItems = new Map([

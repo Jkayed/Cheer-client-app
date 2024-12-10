@@ -31,7 +31,7 @@ function ShowLocalGroups({ groups }) {
 
   const handleConfirmRequest = () => {
     if (selectedGroupId) {
-      fetch(`http://localhost:3000/groups/${selectedGroupId}/request`, {
+      fetch(`https://cheer-client-app-backend.onrender.com/groups/${selectedGroupId}/request`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

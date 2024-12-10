@@ -10,9 +10,9 @@ const Sidebar = ({ currentUserId }) => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-
+  // http://localhost:3000
   useEffect(() => {
-    fetch(`http://localhost:3000/recent-conversations/${currentUserId}`)
+    fetch(`https://cheer-client-app-backend.onrender.com/recent-conversations/${currentUserId}`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched conversations:", data);

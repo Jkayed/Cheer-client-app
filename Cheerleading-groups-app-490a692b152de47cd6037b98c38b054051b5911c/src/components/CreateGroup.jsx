@@ -57,7 +57,7 @@ function CreateGroup() {
           lon: location.lon,
         });
         // Send data to the backend
-        await axios.post("http://localhost:3000/contact", {
+        await axios.post("https://cheer-client-app-backend.onrender.com/contact", {
           ownerID: currentUser.uid,
           firstName: formData.ownerFirstName,
           lastName: formData.ownerLastName,

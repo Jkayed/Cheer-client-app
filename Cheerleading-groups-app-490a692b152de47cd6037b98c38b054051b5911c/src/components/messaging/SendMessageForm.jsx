@@ -4,7 +4,7 @@ function SendMessageForm({ senderId, receiverId }) {
   const [content, setContent] = useState("");
 
   const sendMessage = () => {
-    const response = fetch("http://localhost:3000/messages", {
+    const response = fetch("https://cheer-client-app-backend.onrender.com/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

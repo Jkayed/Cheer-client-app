@@ -11,7 +11,7 @@ function ManagedGroups() {
   const navigate = useNavigate(); // Use the navigate hook
 
   useEffect(() => {
-    fetch(`http://localhost:3000/groups`)
+    fetch(`https://cheer-client-app-backend.onrender.com/groups`)
       .then((response) => response.json())
       .then((data) => {
         const filteredGroups = data.filter(

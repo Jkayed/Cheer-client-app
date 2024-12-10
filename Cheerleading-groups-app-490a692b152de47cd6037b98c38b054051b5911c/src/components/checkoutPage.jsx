@@ -1,6 +1,6 @@
 function CheckoutPage() {
   function checkout() {
-    fetch("http://localhost:3000/create-checkout-session", {
+    fetch("https://cheer-client-app-backend.onrender.com/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

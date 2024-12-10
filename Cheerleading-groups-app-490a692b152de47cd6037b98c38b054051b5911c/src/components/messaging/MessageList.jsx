@@ -4,7 +4,7 @@ function MessageList({ userId1, userId2 }) {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/messages/${userId1}/${userId2}`)
+    fetch(`https://cheer-client-app-backend.onrender.com/messages/${userId1}/${userId2}`)
       .then((response) => response.json())
       .then((data) => setMessages(data))
       .catch((error) => console.error("Error fetching messages:", error));

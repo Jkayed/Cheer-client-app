@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io("http://localhost:3000");
+const socket = io("https://cheer-client-app-backend.onrender.com");
 
 const useChat = (currentUserId, receiverId) => {
   const [messages, setMessages] = useState([]);

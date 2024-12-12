@@ -50,7 +50,7 @@ function Authentication() {
       } else if (error.code === "auth/invalid-email") {
         setErrorMessage("Invalid email format. Please enter a valid email.");
       } else {
-        setErrorMessage("An error occurred during login. Please try again.");
+        setErrorMessage("Worng email or password. Please try again.");
       }
     }
   };

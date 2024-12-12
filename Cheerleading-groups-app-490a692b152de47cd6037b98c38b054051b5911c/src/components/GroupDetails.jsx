@@ -210,7 +210,7 @@ const GroupDetails = () => {
           return (
             <User
               avatarProps={{ radius: "lg", src: member.avatar }}
-              description={member.email}
+              description={member.firstName}
               name={`${member.firstName}`}
             />
           );
@@ -292,7 +292,7 @@ const GroupDetails = () => {
           return cellValue;
       }
     },
-    [] // Dependency to ensure modal state updates correctly
+    [group.ownerID] // Dependency to ensure modal state updates correctly
   );
 
   const renderCellRequests = React.useCallback(
@@ -521,6 +521,7 @@ const GroupDetails = () => {
       </TableRow>
     ));
   };
+  console.log(members)
   const isOwner = currentUser?.uid === group.ownerID;
   const formatLocation = (city, state) => {
     const capitalize = (word) =>

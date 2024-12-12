@@ -292,7 +292,7 @@ const GroupDetails = () => {
           return cellValue;
       }
     },
-    [group.ownerID] // Dependency to ensure modal state updates correctly
+    [group] 
   );
 
   const renderCellRequests = React.useCallback(

@@ -104,7 +104,9 @@ const GroupDetails = () => {
   };
   const fetchGroupData = () => {
     setLoading(true);
-    fetch(`https://cheer-client-app-backend.onrender.com/groups/${groupId}/members`)
+    fetch(
+      `https://cheer-client-app-backend.onrender.com/groups/${groupId}/members`
+    )
       .then((response) => response.json())
       .then((data) => {
         setMembers(data);
@@ -115,7 +117,9 @@ const GroupDetails = () => {
         setLoading(false);
       });
 
-    fetch(`https://cheer-client-app-backend.onrender.com/groups/${groupId}/requests`)
+    fetch(
+      `https://cheer-client-app-backend.onrender.com/groups/${groupId}/requests`
+    )
       .then((response) => response.json())
       .then((data) => {
         setRequests(data);
@@ -125,7 +129,9 @@ const GroupDetails = () => {
       });
   };
   const fetchProducts = () => {
-    fetch(`https://cheer-client-app-backend.onrender.com/groups/${groupId}/products`)
+    fetch(
+      `https://cheer-client-app-backend.onrender.com/groups/${groupId}/products`
+    )
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
@@ -268,6 +274,10 @@ const GroupDetails = () => {
             </div>
           );
         case "payment":
+          if (!group || !currentUser || !group.ownerID || !currentUser.uid) {
+            return null; // Or a loading spinner
+          }
+
           return group.ownerID === currentUser.uid ? (
             <div className="flex items-center gap-2">
               <button
@@ -288,6 +298,7 @@ const GroupDetails = () => {
               </button>
             </div>
           ) : null;
+
         default:
           return cellValue;
       }
@@ -521,7 +532,7 @@ const GroupDetails = () => {
       </TableRow>
     ));
   };
-  console.log(members)
+  console.log(members);
   const isOwner = currentUser?.uid === group.ownerID;
   const formatLocation = (city, state) => {
     const capitalize = (word) =>

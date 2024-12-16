@@ -207,6 +207,8 @@ const GroupDetails = () => {
       console.error("Error updating payment status:", error.message);
     }
   };
+  console.log(group.ownerID)
+console.log(currentUser.uid)
   const renderCell = React.useCallback(
     (member, columnKey) => {
       const cellValue = member[columnKey];

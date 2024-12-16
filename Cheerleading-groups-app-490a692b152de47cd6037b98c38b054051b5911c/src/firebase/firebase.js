@@ -1,13 +1,14 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBsYVGTtEcpL235Du7rXDbgg1ZzgVKR8q8",
+  apiKey: import.meta.env.VITE_FIREBASE_API_URL,
   authDomain: "cheerapp-c0e5e.firebaseapp.com",
   projectId: "cheerapp-c0e5e",
   storageBucket: "cheerapp-c0e5e.appspot.com",

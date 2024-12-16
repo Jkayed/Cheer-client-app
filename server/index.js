@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const { Server } = require("socket.io");
+require('dotenv').config()
 const stripe = require("stripe")(
   "sk_test_51PuIxd04SqVmxWqObj6TUfy02Py19x7wA8qN572q2fOhoW97EbowJlYRG6mMUq4ySAyw8gnurg4V8vIvtJzm8ceW00QcfZ9XuQ"
 );
@@ -36,7 +37,7 @@ module.exports = MessageBoard;
 
 // MongoDB Connection
 const CONNECTION_STRING =
-  "mongodb+srv://jkayed0:nOI2coAj1TQE53kV@cluster0.zzrxo.mongodb.net/Cheerapp?retryWrites=true&w=majority";
+  process.env.CONNECTION_STRING;
 
 mongoose
   .connect(CONNECTION_STRING, {
